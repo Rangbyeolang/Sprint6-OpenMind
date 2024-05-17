@@ -1,58 +1,8 @@
 import React, { useId, useState } from "react";
-import styled from "styled-components";
-import { colors } from "../../styles/colors";
 import { Link, useNavigate } from "react-router-dom";
 import { getSubject } from "../../api/api";
+import { Input,QuestionButton,InputContainer } from "../../pages/homepage/HomePage";
 
-const Input = styled.input`
-  width: 336px;
-  height: 46px;
-  border: solid 1px ${colors.GRAYSCALE_40};
-  border-radius: 8px;
-  background-color: #ffffff;
-  padding: 12px 40px;
-
-  &:focus {
-    border: solid 1px ${colors.BROWN_40};
-  }
-
-  @media (max-width: 767px) {
-    width: 257px;
-  }
-`;
-
-const QuestionButton = styled.button`
-  width: 336px;
-  height: 46px;
-  background-color: ${colors.BROWN_40};
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
-  text-decoration: none;
-  color: #ffffff;
-
-  transition: transform 0.2s ease-in-out;
-
-  &:active {
-    background-color: ${(props) =>
-      props.disabled ? colors.BROWN_20 : colors.BROWN_50};
-    transform: scale(0.98);
-  }
-
-  @media (max-width: 767px) {
-    width: 257px;
-  }
-`;
-
-const InputContainer = styled.div`
-  width: 100%;
-  height: 108px;
-  border: none;
-  background-color: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
 
 const PostForm = () => {
   const navigate = useNavigate();

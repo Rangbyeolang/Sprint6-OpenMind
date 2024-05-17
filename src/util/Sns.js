@@ -1,6 +1,6 @@
 const { Kakao } = window;
 
-export const shareKakao = (name, src, Url) => {
+export const shareKakao = (src, Url) => {
   if (!Kakao.isInitialized()) Kakao.init("ea948df165b05ad3f992fcef47a73ea2");
 
   Kakao.Share.sendDefault({

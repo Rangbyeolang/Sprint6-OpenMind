@@ -118,7 +118,7 @@ const HeadProfile = ({ image, subjectId }) => {
             />
             <SnsKakaoTalk
               onClick={() => {
-                shareKakao(name, image, Url);
+                shareKakao(image, Url);
               }}
               style={{ cursor: "pointer" }}
             />
